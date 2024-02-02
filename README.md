@@ -49,31 +49,31 @@ Before we dive deeper into the questions, here are some information on our data.
 Now we will briefly discuss what our dataset contains. 
 1. MPAA: Most of movies in our data are PG-13 and R-rated.  
 	
-![Distribution of MPAA](PNG/MPAA_distribution.png)
+![Distribution of MPAA](results/MPAA_distribution.png)
 
 2. Studios 
 
-![Distribution of Studio](PNG/Studio_Distribution.png)
+![Distribution of Studio](results/Studio_Distribution.png)
 
 3. Original Language: Original language of 99% of the films in our dataset is English.
 
 4. Budget Distribution
 
-![Distribution of Budget](PNG/Budget_Distribution.png)
+![Distribution of Budget](results/Budget_Distribution.png)
 
 5. Gross Revenue Distribution: Most domestic movies don't yield gross revenue above $200M. But worldwide movies do yield higher revenue. Since it's assuming to be cumulative measure, this is not surprising.  
 
-![Distribution of Gross Revenue](PNG/Gross_Revenue_Distribution.png)
+![Distribution of Gross Revenue](results/Gross_Revenue_Distribution.png)
 
 6. Runtime Distribution: Most movies around an hour to 2.5 hrs.
 
-![Distribution of Runtime](PNG/Runtime_Distribution.png)
+![Distribution of Runtime](results/Runtime_Distribution.png)
 
 7. Genre Distribution
 
 *Original dataset had animation as a sub-genre, but we considered animation as a separate genre. This is because most animated films are PG or G-rated and this was a key divider of other genres. For example, animated action and non-animated action films tend to show highly different patterns in terms of audience, revenue, production budget, etc.*
 
-![Distribution of Genre](PNG/Genre_Distribution.png)
+![Distribution of Genre](results/Genre_Distribution.png)
 
 
 # Process
@@ -83,14 +83,14 @@ With building brand presence and long term profit in mind, we explored data and 
 ## Understanding the current market. 
 ### What types of movies have yielded highest revenue?  
 
-![Top 7 Genres with Highest Revenues](PNG/top7_genres_wldgrss.png)
+![Top 7 Genres with Highest Revenues](results/top7_genres_wldgrss.png)
 
 Animation, action and adventure movies on average have high worldwide gross revenue compared to other genres. These genres also have relatively high production budget. 
 
 
 ### Is there any difference in domestic vs. global market in types of movie people consume?
 
-![Budget to Ratio](PNG/Budget_to_Revenue.png)
+![Budget to Ratio](results/Budget_to_Revenue.png)
 
 We see here that in the global market, even some of the lower production budget films have a potential of gaining high revenue. Bohemian Rhapsody and Coco are examples of such cases. It's important to note that these films were explicitly targeting the global market with universally common sentiment and worldwidely popular topic.
 
@@ -98,16 +98,16 @@ We see here that in the global market, even some of the lower production budget 
 
 We also looked at the main cast of each movies to see if they say anything about the worldwide vs. domestic trend difference. But given our dataset is limited to 10 years and individual actors don't have as many movie data to show individual differences beyond the movie differences. So this result speaks to the overall movies than suggesting information about individual actors. Despite the fact, we still included here because we think it holds some meaningful information. We normalized the worldwide gross and domestic gross to compare them on the same scale as we were interested in knowing relative difference in success.
 
-![Top 30 Successful Casts](PNG/Top30_Successful_Casts.png)
+![Top 30 Successful Casts](results/Top30_Successful_Casts.png)
 
 Here we see that top 30 casts are all well above 95th percentile in either market.
 But from seeing the success of voice casts in global market relative to domestic market, we can presume animation might have been relatively more successful domestically than other genres.
 
-![Top 30-60 Successful Casts](PNG/Top30-60_Successful_Casts.png)
+![Top 30-60 Successful Casts](results/Top30-60_Successful_Casts.png)
 
 Casts from the movies like Life of Pi, Aladdin, and Ready Player One had shown remarkably more success globally even when their performance was about average for domestic crowd. 
 
-![Top 20 Relative Stars](PNG/Top20_Relative_WorldwideStars.png)
+![Top 20 Relative Stars](results/Top20_Relative_WorldwideStars.png)
 
 These are top 20 stars whose success in global market is relatively highest compared to that of domestic market. This shows Bollywood as an important market to consider. Combining above points, we recommend investigating more into diversity of represented crowd, 007, music, bollywood, gaming as keywords that might be appealing to the global market.
 
@@ -115,7 +115,7 @@ These are top 20 stars whose success in global market is relatively highest comp
   
 ### Is there any change in trend? 
 
-![Yearly Genres](PNG/Yearly_Genre.png)
+![Yearly Genres](results/Yearly_Genre.png)
 
 We see that comedy and drama productions have been steadilyly decreasing in the past decade, while biography films are on the rise. How we may react to this trend requires further investigation.  
 
@@ -125,7 +125,7 @@ One suggestion for future analyses is to consider how categorization of movies m
 ### What is the reasonable investment to maximize the gain?
 Earlier we discussed that action, animation and adventures on average yield highest revenue. But there is a big caveat to consider.  
 
-![Worldwide gross per Genre](PNG/wldgross_boxplot_genre.png)
+![Worldwide gross per Genre](results/wldgross_boxplot_genre.png)
 
 From this boxplot, we can see how majority of action remains on the lower end of the revenue. This, considering the high budget involved in making action films, is rather devastating. Even though action genre is associated with the second highest worldwide revenue, the chance of success is slim. In fact, it is many rare cases with exceptional successes that made up for this high average. 
 
@@ -133,17 +133,17 @@ Majority of these rare successes are Marvel/DC production dominated superhero mo
 
 On the other hand, higher percentage of animation tend to do better than other genres in the global market, making it to be safer investment with mid-to-high budget. 
 
-![Percentage of 4x Budget](PNG/four_x_wldgross.png)
+![Percentage of 4x Budget](results/four_x_wldgross.png)
 
 Close to 40% of animated films returned at least 4 times of its production budget, while only about 20% of action movies did. Additionally, more than 85% of the non-action movies that made above $750M worldwide gross revenue with relatively lower budget (less than $200M budget) were animation or live-action based on animation. 
 
-![Non-action high movies](PNG/Non_Action_low_budget_high_gross.png)
+![Non-action high movies](results/Non_Action_low_budget_high_gross.png)
 
 So for the highest return and for domestic and worldwide branding, we recommend targeting animation. 
 
 
 ### But horror movie did better?
-![Percentage of 5x Budget](PNG/five_x_wldgross_percent.png)
+![Percentage of 5x Budget](results/five_x_wldgross_percent.png)
 
 If our goal is to simply minimize our risk and start small, horror movies are the best bet. Horror films brought in the most revenue per investment, and requires little budget to start out. 
 
@@ -152,7 +152,7 @@ But we generally want to advise against this approach, because horror films donâ
 
 ### What other features may influence the sales?  
 
-![Revenue and Release Month](PNG/Average_Grossing_per_Release_Month.png)
+![Revenue and Release Month](results/Average_Grossing_per_Release_Month.png)
 
 Looking at the annual trend, we can see that movies released in April to June tend to be the highest revenue yielding ones. This would be a great time to release our globally appealing animation and family adventures.
 
@@ -164,7 +164,7 @@ Highly acclaimed movies are released close to the end of the year during the â€œ
 ### What type of movies or team gets nominated for awards? 
 We believe that making quality movies are highly acclaimed and win awards are important in building a sustainable brand. These movies should be stacked with our high-profit yielding family animation to solidify our brand presence in the market. Unfortunately our dataset does not contain award information and we hope to have more accurate measure for awards for the future investigation. Meanwhile, we used IMDB ratings as an indication of film's award-worthiness.
 
-![IMDB rating genres](PNG/Rating_genre.png)
+![IMDB rating genres](results/Rating_genre.png)
 
 We can see that biography films tend to have higher ratings compared to other genres. In fact, biography films have recently trended to rate high and often are nominated for awards. With films like Bohemian Rhapsody, Rocketman, Selma and the Iron Lady gaining nominations and awards. We believe that combining the biography genre with the globally appealing topics are a feasible market to target.
 
@@ -176,11 +176,11 @@ Popularity measure from the Movie Database includes multiple variables including
 
 Our data showed that this popularity measure positively and strongly correlates the gross revenue.  
 
-![Popularity_Worldwide_Revenue](PNG/Popularity_Revenue_Corr.png)
+![Popularity_Worldwide_Revenue](results/Popularity_Revenue_Corr.png)
 
 Therefore we recommend further investigation of virality in relation to popularity measures.
 
-![Popularity_Genre](PNG/Popularity_genre.png)
+![Popularity_Genre](results/Popularity_genre.png)
 
 Other than action, adventure, animation most movies are not as popular. For drama and comedy, some movies seem to gain a relatively large popularity. But most comedy, crime and horror films tend to stay in lower tier.
 
@@ -188,11 +188,11 @@ Other than action, adventure, animation most movies are not as popular. For dram
 ### Are there any topical pattern in successful movies?  
 Additionally we were interested in seeing if there are any topical keywords related to the success of the films. For this we took the overview texts of high popularity movies (90th percentile and above, 60 movies) and low popularity movies (10th percentile and below, 60 movies) and counted the most used words. 
 
-![Keyword_High_popularity](PNG/Key_Highpop.png)![Keyword_Low_popularity](PNG/Key_Lowpop.png)  
+![Keyword_High_popularity](results/Key_Highpop.png)![Keyword_Low_popularity](results/Key_Lowpop.png)  
 
 High popularity group tends to have more macro scale words (e.g. kingdom, world, war, powerful, earth) used than the low popularity group that tend to use micro scale words (e.g. family, two, wife, son).
 
-![WC_Keyword_High_popularity](PNG/Key_Highpop_wc.png)  ![WC_Keyword_Low_popularity](PNG/Key_Lowpop_wc.png)  
+![WC_Keyword_High_popularity](results/Key_Highpop_wc.png)  ![WC_Keyword_Low_popularity](results/Key_Lowpop_wc.png)  
 
 It is certainly not a definitive measure of success as these keywords are biased by unmatched success of superhero action movies, which tend to require more universal descriptors. But further investigation of this sort may reveal more insight into understanding topical virality in film consumption.
 
