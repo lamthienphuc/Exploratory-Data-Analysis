@@ -1,4 +1,4 @@
-# Movie Trend Analsis 
+# Movie Trend Analysis 
 
 
 This repository contains data collection, cleaning and analyses of the movie data from the past decade (2010 - 2019).  
